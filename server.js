@@ -11,8 +11,8 @@ app.get("/youtube", async (req, res) => {
   const Youtube = require("youtube-node");
   const youtube = new Youtube();
 
-  let word = "반려동물 준비물";
-  let limit = 10;
+  let word = "강아지 준비물";
+  let limit = 30;
 
   youtube.setKey("AIzaSyCilja0kKHgytKakktfm_wHQYOumOW4w50");
 
@@ -43,7 +43,6 @@ app.get("/youtube", async (req, res) => {
       imgList.push(thumbnail_img);
     });
 
-    // 객체에 각 배열들 담기.
     let itemList = { titleList, urlList, imgList };
     res.send(itemList);
   });

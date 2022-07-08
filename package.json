@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start:back": "nodemon --exec  babel-node  server.js"
+    "start:web": "nodemon --exec  babel-node  server.js",
+    "start:chat": "nodemon --exec  babel-node  chat.js"
   },
   "author": "",
   "license": "ISC",
@@ -16,6 +17,7 @@
     "cors": "^2.8.5",
     "express": "^4.18.1",
     "nodemon": "^2.0.18",
+    "socket.io": "^4.5.1",
     "youtube-node": "^1.3.3"
   }
 }
