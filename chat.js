@@ -2,10 +2,11 @@ const httpServer = require("http").createServer();
 const port = process.env.PORT + 1 || 8082;
 const io = require("socket.io")(httpServer, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: "http://localhost:3000" || "https://before-we-meet.herokuapp.com",
+    credentials: true,
     methods: ["GET", "POST"],
   },
-}); // cors 오류로 인한 설정.
+});
 
 io.on("connection", (socket) => {
   socket.on("send message", (message) => {
