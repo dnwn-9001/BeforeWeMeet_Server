@@ -1,4 +1,10 @@
-const httpServer = require("https").createServer();
+const httpServer =
+  process.env.NODE_ENV === "production"
+    ? require("https").createServer({
+        key: fs.readFileSync("/tmp/key.pem"),
+        cert: fs.readFileSync("/tmp/cert.pem"),
+      })
+    : require("http").createServer();
 const port = process.env.NODE_ENV === "production" ? 443 : 8082;
 const io = require("socket.io")(httpServer, {
   cors: {
