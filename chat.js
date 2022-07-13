@@ -4,10 +4,6 @@ const fs = require("fs");
 const httpServer = require("http").createServer(app);
 const port = normalizePort(process.env.PORT || "80");
 
-app.get("/", (req, res) => {
-  res.send("chat!!");
-});
-
 const io = require("socket.io")(httpServer, {
   cors: {
     origin: "*",
