@@ -10,9 +10,11 @@ const io = require("socket.io")(httpServer, {
   },
 });
 
+app.use(express.static(__dirname));
+
 app.get("/", (req, res) => {
   if (err) throw err;
-  res.send(console.log("성공"));
+  res.sendFile(path.join(__dirname, "index.html"));
 });
 
 io.on("connection", (socket) => {
