@@ -1,4 +1,4 @@
-const httpServer = require("http").createServer();
+const httpServer = require("https").createServer();
 const port = process.env.NODE_ENV === "production" ? 443 : 8082;
 const io = require("socket.io")(httpServer, {
   cors: {
