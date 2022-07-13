@@ -1,12 +1,13 @@
-const express = require("express");
-const app = express();
-const cors = require("cors");
-const httpServer = require("http").createServer(app);
+const httpServer = require("http").createServer();
 const port =
   process.env.NODE_ENV === "production" ? process.env.PORT + 1 : 8082;
-const io = require("socket.io")(httpServer);
-
-app.use(cors());
+const io = require("socket.io")(httpServer, {
+  cors: {
+    origin: "http://localhost:3000" || "https://before-we-meet.herokuapp.com",
+    credentials: true,
+    methods: ["GET", "POST"],
+  },
+});
 
 io.on("connection", (socket) => {
   socket.on("send message", (message) => {
