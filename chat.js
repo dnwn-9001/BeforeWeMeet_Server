@@ -1,9 +1,6 @@
 const express = require("express");
 const app = express();
 const fs = require("fs");
-
-app.set("port", process.env.PORT || 443 || 4000);
-
 const httpServer =
   process.env.NODE_ENV === "production"
     ? require("https").createServer({
