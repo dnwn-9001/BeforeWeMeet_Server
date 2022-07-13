@@ -1,13 +1,7 @@
 const express = require("express");
 const app = express();
 const fs = require("fs");
-const httpServer =
-  process.env.NODE_ENV === "production"
-    ? require("https").createServer({
-        key: fs.readFileSync("/tmp/key.pem"),
-        cert: fs.readFileSync("/tmp/cert.pem"),
-      })
-    : require("http").createServer(app);
+const httpServer = require("http").createServer(app);
 const port = normalizePort(process.env.PORT || "80");
 
 app.get("/", (req, res) => {
