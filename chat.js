@@ -8,7 +8,8 @@ const io = require("socket.io")(httpServer, {
       "http://localhost:3002" ||
       "http://localhost:3003" ||
       "https://before-we-meet.herokuapp.com" ||
-      "https://before-we-meet-gqek60mgo-dnwn-9001.vercel.app/",
+      "https://before-we-meet-gqek60mgo-dnwn-9001.vercel.app/" ||
+      "https://before-we-meet-grtaa4xgh-dnwn-9001.vercel.app/",
     credentials: true,
     methods: ["GET", "POST"],
   },
