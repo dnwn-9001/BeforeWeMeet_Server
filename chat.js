@@ -1,6 +1,9 @@
 const express = require("express");
 const app = express();
 const fs = require("fs");
+
+app.set("port", process.env.PORT || 443 || 4000);
+
 const httpServer =
   process.env.NODE_ENV === "production"
     ? require("https").createServer({
@@ -8,7 +11,7 @@ const httpServer =
         cert: fs.readFileSync("/tmp/cert.pem"),
       })
     : require("http").createServer(app);
-const port = process.env.NODE_ENV === "production" ? 3000 : 8082;
+const port = process.env.NODE_ENV === "production" ? 443 : 8082;
 
 app.get("/", (req, res) => {
   res.send("chat!!");
@@ -16,14 +19,7 @@ app.get("/", (req, res) => {
 
 const io = require("socket.io")(httpServer, {
   cors: {
-    origin:
-      "http://localhost:3000" ||
-      "http://localhost:3001" ||
-      "http://localhost:3002" ||
-      "http://localhost:3003" ||
-      "https://before-we-meet.herokuapp.com" ||
-      "https://before-we-meet-gqek60mgo-dnwn-9001.vercel.app/" ||
-      "https://before-we-meet-grtaa4xgh-dnwn-9001.vercel.app/",
+    origin: "*",
     credentials: true,
     methods: ["GET", "POST"],
   },
