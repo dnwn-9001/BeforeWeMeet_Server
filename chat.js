@@ -8,7 +8,7 @@ const httpServer =
         cert: fs.readFileSync("/tmp/cert.pem"),
       })
     : require("http").createServer(app);
-const port = process.env.NODE_ENV === "production" ? 443 : 8082;
+const port = normalizePort(process.env.PORT || "80");
 
 app.get("/", (req, res) => {
   res.send("chat!!");
