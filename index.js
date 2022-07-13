@@ -61,7 +61,7 @@ app.get("/youtube", async (req, res) => {
   const word = keyword;
   const limit = 20;
 
-  youtube.setKey(process.env.API_KEY);
+  youtube.setKey(API_KEY);
 
   youtube.search(word, limit, (err, result) => {
     if (err) {
