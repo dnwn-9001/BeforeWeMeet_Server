@@ -1,7 +1,4 @@
-const express = require("express");
-const app = express();
-const fs = require("fs");
-const httpServer = require("http").createServer(app);
+const httpServer = require("http").createServer();
 const port = normalizePort(process.env.PORT || "80");
 
 const io = require("socket.io")(httpServer, {
