@@ -1,22 +1,32 @@
 const express = require("express");
+const http = require("http");
 const app = express();
-const httpServer = require("http").createServer(app);
+const httpServer = http.createServer(app);
 const port = process.env.PORT || "80";
+
 const io = require("socket.io")(httpServer, {
   cors: {
     origin: "*",
-    credentials: true,
     methods: ["GET", "POST"],
+    allowedHeaders: ["*"],
+    credentials: true,
   },
 });
 
 io.on("connection", (socket) => {
-  socket.on("send message", (message) => {
-    console.log("message:" + message);
-    io.emit("receive message", message);
+  socket.on("join", () => {
+    io.emit("onConnect", `상담을 위한 채팅창입니다.`);
+  });
+
+  socket.on("onSend", (messageItem) => {
+    io.emit("onReceive", messageItem);
+  });
+
+  socket.on("disconnect", () => {
+    io.emit("onDisconnect", `퇴장하셨습니다.`);
   });
 });
 
 httpServer.listen(port, () => {
-  console.log("채팅 서버가 돌아가고있습니다.");
+  console.log(`Listening on port ${port}`);
 });
