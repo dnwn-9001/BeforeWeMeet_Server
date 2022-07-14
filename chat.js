@@ -3,7 +3,6 @@ const port = process.env.PORT || "80";
 const io = require("socket.io")(httpServer, {
   cors: {
     origin: "*",
-    methods: ["GET", "POST"],
   },
 });
 
