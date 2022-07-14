@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- socketio 라이브러리 로딩하는 cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.3/socket.io.js"></script>
+    <script>
+      // 클라이언트를 만드는 코드
+      // 접속시도을 합니다.
+
+      var socket = io();
+      //연결되면 connect이벤트가 발생한다.
+      socket.on("connect", function (arg) {
+        console.log("server connect success");
+      });
+    </script>
+  </body>
+</html>

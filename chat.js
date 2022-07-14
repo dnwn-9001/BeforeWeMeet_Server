@@ -1,7 +1,8 @@
+const path = require("path");
 const express = require("express");
 const app = express();
 const httpServer = require("http").createServer(app);
-const port = normalizePort(process.env.PORT || "80");
+const port = process.env.PORT || "80";
 const io = require("socket.io")(httpServer, {
   cors: {
     origin: "*",
@@ -14,7 +15,7 @@ app.use(express.static(__dirname));
 
 app.get("/", (req, res) => {
   if (err) throw err;
-  res.sendFile(path.join(__dirname, "index.html"));
+  res.sendFile(path.join(__dirname, "./src/index.html"));
 });
 
 io.on("connection", (socket) => {
