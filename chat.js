@@ -1,7 +1,13 @@
+const fs = require("fs");
 const express = require("express");
-const http = require("http");
 const app = express();
-const httpServer = http.createServer(app);
+const httpServer =
+  process.env.NODE_ENV === "production"
+    ? require("https").createServer({
+        key: fs.readFileSync("/tmp/key.pem"),
+        cert: fs.readFileSync("/tmp/cert.pem"),
+      })
+    : require("http").createServer(app);
 const port = process.env.PORT + 1 || "80";
 
 const io = require("socket.io")(httpServer, {
