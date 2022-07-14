@@ -2,7 +2,7 @@ const express = require("express");
 const http = require("http");
 const app = express();
 const httpServer = http.createServer(app);
-const port = process.env.PORT || "80";
+const port = process.env.PORT + 1 || "80";
 
 const io = require("socket.io")(httpServer, {
   cors: {
