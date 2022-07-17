@@ -36,11 +36,3 @@ youtube api, React-router-dom,axios,antd,react-slick 라이브러리와 socket.i
 #### 3.socket.io를 이용하여 전문가와 상담할 수 있는 기능 구현
 ![003](https://user-images.githubusercontent.com/106906742/179073772-d08bf3e3-ab0a-4a73-b115-0ebca4e2a0ab.png)  
 </br>
-
-
-### :hammer: 개선하기(~ing) :hammer:
-1.Entertain 영역 추가.</br>
-2.페이지 우측에 해당 영역에 대한 설명 배너 넣기.</br>
-3.회원가입(일반 회원, 전문가), 로그인 기능을 만들어 일반 회원이 전문가와 상담할 수 있도록 구현.</br>
-4.배포 후 socket이 연결되지 않는 문제 해결.
-</div>
