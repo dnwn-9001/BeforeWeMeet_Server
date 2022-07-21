@@ -5,7 +5,7 @@
 ![화면 캡처 2022-07-12 172022](https://user-images.githubusercontent.com/106906742/178501426-abc47540-4c24-4a9b-82eb-f38e756508de.jpg)
 
 ### :zap: Demo :zap:
-https://before-we-meet-drby7xy0v-dnwn-9001.vercel.app/  
+https://before-we-meet-web.vercel.app/
 
 
 ### :information_desk_person: 웹 페이지 설명
