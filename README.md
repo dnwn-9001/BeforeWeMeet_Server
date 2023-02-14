@@ -25,15 +25,3 @@ youtube api,React-router-dom,axios,antd,react-slick,socket.io,express의 활용�
 <img src="https://img.shields.io/badge/-React-black?style=flat-square&logo=React&logoColor=#61DAFB"/> <img src="https://img.shields.io/badge/-Node.js-yellow?style=flat-square&logo=Node.js&logoColor=black"/> <img src="https://img.shields.io/badge/-Nodemon-F7DF1E?style=flat-square&logo=Nodemon&logoColor=#76D04B"/> <img src="https://img.shields.io/badge/-Express-blue?style=flat-square&logo=Express&logoColor=#000000"/> </br> <img src="https://img.shields.io/badge/-JavaScript-white?style=flat-square&logo=JavaScript&logoColor=#F7DF1E"/> <img src="https://img.shields.io/badge/-HTML5-beige?style=flat-square&logo=HTML5&logoColor=#E34F26"/> <img src="https://img.shields.io/badge/-CSS3-grey?style=flat-square&logo=CSS3&logoColor=#1572B6"/> <img src="https://img.shields.io/badge/-GitHub-pink?style=flat-square&logo=GitHub&logoColor=#181717"/> </br> <img src="https://img.shields.io/badge/-Visual Studio-orange?style=flat-square&logo=Visual Studio&logoColor=#5C2D91"/> 
 <img src="https://img.shields.io/badge/-Heroku-navy?style=flat-square&logo=Heroku&logoColor=#430098"/> <img src="https://img.shields.io/badge/-Vercel-purple?style=flat-square&logo=Vercel&logoColor=#000000"/> <img src="https://img.shields.io/badge/-Socket.io-red?style=flat-square&logo=Socket.io&logoColor=#010101"/> </br>  
 
-
-
-### :heavy_check_mark: Advanced Feature :heavy_check_mark:
-#### 1.유튜브 API를 이용해 유튜브 컨텐츠 데이터 가져오기
-![001](https://user-images.githubusercontent.com/106906742/179073237-aa3c26fc-aa50-4b60-900f-245c2867654c.png)  
-</br>
-#### 2.React Slick 라이브러리를 이용하여 전문가 프로필 자동 슬라이드 구현
-![002](https://user-images.githubusercontent.com/106906742/179073579-ec2c6031-d148-41d0-ac9e-06217403957e.png)  
-</br>
-#### 3.socket.io를 이용하여 전문가와 상담할 수 있는 기능 구현
-![003](https://user-images.githubusercontent.com/106906742/179073772-d08bf3e3-ab0a-4a73-b115-0ebca4e2a0ab.png)  
-</br>
